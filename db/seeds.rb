@@ -13,8 +13,8 @@
 #user = User.create(username: "eustache", password: "eustache123")
 #user = User.create(username: "johane", password: "johane123")
 
-message = Message.create(body: "Bonjour a Kyrah", user_id: "1")
-message = Message.create(body: "My first birthday is today", user_id: "2")
-message = Message.create(body: "I am beautiful", user_id: "1")
-message = Message.create(body: "I love Daddy so much", user_id: "2")
-message = Message.create(body: "I am smart", user_id: "5")
+#message = Message.create(body: "Bonjour a Kyrah", user_id: "1")
+#message = Message.create(body: "My first birthday is today", user_id: "2")
+#message = Message.create(body: "I am beautiful", user_id: "1")
+#message = Message.create(body: "I love Daddy so much", user_id: "2")
+#message = Message.create(body: "I am smart", user_id: "5")
