@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   #set up root page and login pages
   root 'chatroom#index'
   get 'login', to: 'sessions#new'
-  
+  post 'login', to: 'sessions#create'
+  #add the delete route to 
+  delete 'logout', to: 'sessions#destroy'
 end
