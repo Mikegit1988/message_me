@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    
+    before_action :logged_in_redirect, only: [:new, :create] #this private before action will only works for new action and create action
     #define the new action
     def new
         
@@ -24,6 +24,14 @@ class SessionsController < ApplicationController
         session[:user_id] = nil
         flash[:success] = "You have successfully logged out"
         redirect_to login_path
-        
+    end
+    
+    private #this private message will only available in this section
+    
+    def logged_in_redirect
+        if logged_in?
+            flash[:error] = "You are already logged in"
+            redirect_to root_path
+        end
     end
 end
