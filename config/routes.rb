@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   #add the delete route to 
   delete 'logout', to: 'sessions#destroy'
   post 'message', to: 'messages#create' #this route will post message to @message instance
+  
+  mount ActionCable.server, at: '/cable'
 end
