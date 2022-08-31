@@ -7,7 +7,7 @@
     <!--adding a feed-->
     <div class="twelve wide column">
         <div class="ui fluid raised card chatbox"><!--Adding a card to make the element more concistence-->
-            <div class="content">
+            <div class="content" id="messages"> <!--To control the message overflow-->
                 <div class="ui feed" id="message-container">
                   <!--display all the messages using a iterator-->
                     <%= render @messages %>

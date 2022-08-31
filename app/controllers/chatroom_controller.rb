@@ -4,6 +4,7 @@ class ChatroomController < ApplicationController
     
     def index #This action is displaying all user messages
         @message = Message.new #this to initiate new message
-        @messages = Message.all
+        @messages = Message.custom_display
+        #@messages = Message.last(20)
     end
 end

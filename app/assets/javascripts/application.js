@@ -18,9 +18,28 @@
 //= require_tree .
 //this code below is a javascript code to initialize the dropdown menu
 /*global $*/
+/*global scroll_bottom submit_message*/
+//This code below is for adding scrolling functionalites
+scroll_bottom = function(){
+  if ($('#messages').length > 0){
+    $('#messages').scrollTop($('#messages')[0].scrollHeight);
+  }
+};
+//this code is to send the message when hit Enter instead of clicking
+submit_message = function() {
+  $('#message_body').on('keydown', function(e) {
+    if (e.keyCode == 13) {
+      $('buttom').click();
+      //e.target.value = "";
+    };
+  });
+};
+//this is running whenever the page is refreshing
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
-})
+  submit_message();
+  scroll_bottom();
+});
