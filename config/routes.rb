@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   post 'message', to: 'messages#create' #this route will post message to @message instance
   
-  mount ActionCable.server, at: '/cable'
+  mount ActionCable.server, at: '/cable' #this code is for ActionCable connection,we called mount to the rack
 end
